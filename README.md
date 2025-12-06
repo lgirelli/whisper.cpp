@@ -86,6 +86,22 @@ cmake --build build -j --config Release
 ./build/bin/whisper-cli -f samples/jfk.wav
 ```
 
+### Avviare whisper-cli tramite GUI
+
+Per avviare rapidamente la trascrizione da un'interfaccia grafica minimale basata su Tkinter:
+
+```bash
+python3 scripts/whisper_gui.py
+```
+
+La finestra permette di scegliere un file audio (per impostazione predefinita dalla cartella `samples`) e avviare il comando:
+
+```bash
+./build/bin/whisper-cli -m ./models/ggml-large-v3-turbo.bin -f /percorso/del/file
+```
+
+Assicurati di aver compilato il progetto e di aver scaricato il modello `ggml-large-v3-turbo.bin` nella cartella `models/` prima di eseguire la GUI.
+
 ---
 
 For a quick demo, simply run `make base.en`.
